@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css?family=Tomorrow&display=swap");
+body {
+  background: url(assets/webellis.jpg);
+  background-size: cover;
+  background-position: center center;
+  font-family: 'Tomorrow', sans-serif; }
+  @media screen and (max-width: 768px) {
+    body {
+      background-size: cover;
+      background-position-x: -14em; } }
+
+.logo {
+  background: url(assets/logo.jpg);
+  background-size: 100%;
+  border-radius: 50%;
+  height: 300px;
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  width: 300px; }
+  @media screen and (max-width: 768px) {
+    .logo {
+      height: 100px;
+      top: 10px;
+      right: 10px;
+      width: 100px; } }
+
+h1, h2, h3, h4, h5, a, div {
+  color: white;
+  font-family: 'Tomorrow', sans-serif;
+  margin: 0 auto;
+  max-width: 100%;
+  text-shadow: 2px 2px #444444;
+  width: 1024px; }
+  @media screen and (max-width: 768px) {
+    h1, h2, h3, h4, h5, a, div {
+      width: 700px; } }
+
+h2 {
+  font-size: 40px;
+  margin-top: 200px; }
+  @media screen and (max-width: 768px) {
+    h2 {
+      font-size: 32px;
+      margin-top: 100px; } }
+
+h3 {
+  font-size: 24px;
+  margin-top: 10px; }
+
+p {
+  font-size: 24px; }
+
+.pantalla {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  opacity: 1;
+  -webkit-transition: ease-in-out .5s all;
+  -o-transition: ease-in-out .5s all;
+  transition: ease-in-out .5s all;
+  width: 1024px; }
+  @media screen and (max-width: 768px) {
+    .pantalla {
+      padding: 20px;
+      width: 700px; } }
+  .pantalla.oculta {
+    opacity: 0;
+    display: none; }
+
+.candidatos {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px; }
+  .candidatos .candidato {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 10px;
+    -webkit-transition: ease-in-out .5s all;
+    -o-transition: ease-in-out .5s all;
+    transition: ease-in-out .5s all;
+    width: 150px; }
+    @media screen and (max-width: 768px) {
+      .candidatos .candidato {
+        width: 300px; } }
+    .candidatos .candidato__img {
+      background-size: cover;
+      border: 10px white solid;
+      border-radius: 50%;
+      cursor: crosshair;
+      height: 150px;
+      width: 150px; }
+      @media screen and (max-width: 768px) {
+        .candidatos .candidato__img {
+          height: 250px;
+          width: 250px; } }
+    .candidatos .candidato h4 {
+      font-size: 20px;
+      margin-top: 10px;
+      text-align: center;
+      -webkit-transition: ease-in-out .5s all;
+      -o-transition: ease-in-out .5s all;
+      transition: ease-in-out .5s all; }
+    .candidatos .candidato:hover, .candidatos .candidato:focus {
+      opacity: 0.8;
+      -webkit-transform: rotate(2deg) scale(1.2);
+      -ms-transform: rotate(2deg) scale(1.2);
+      transform: rotate(2deg) scale(1.2); }
+      .candidatos .candidato:hover .candidato__img, .candidatos .candidato:focus .candidato__img {
+        border: 10px gold solid; }
+      .candidatos .candidato:hover h4, .candidatos .candidato:focus h4 {
+        color: gold; }
+    .candidatos .candidato__pancracia-img {
+      background-image: url(assets/pancracia.jpg); }
+    .candidatos .candidato__camila-img {
+      background-image: url(assets/camila.jpg); }
+    .candidatos .candidato__mery-img {
+      background-image: url(assets/mery.jpg); }
+    .candidatos .candidato__jopi-img {
+      background-image: url(assets/jopi.jpg); }
+    .candidatos .candidato__luisa-img {
+      background-image: url(assets/luisa.jpg); }
+    .candidatos .candidato__blue-img {
+      background-image: url(assets/blue.jpg); }
+    .candidatos .candidato__kelly-img {
+      background-image: url(assets/kelly.jpg); }
+    .candidatos .candidato__jenifer-img {
+      background-image: url(assets/jenifer.jpg); }
+    .candidatos .candidato__tati-img {
+      background-image: url(assets/tatiana.jpg); }
+    .candidatos .candidato__dani-img {
+      background-image: url(assets/danny.jpg); }
+    .candidatos .candidato__e3-img {
+      background-image: url(assets/e3.jpg); }
+    .candidatos .candidato__freiman-img {
+      background-image: url(assets/freiman.jpg); }
+    .candidatos .candidato__sebas-img {
+      background-image: url(assets/sebas.jpg); }
+    .candidatos .candidato__farid-img {
+      background-image: url(assets/farid.jpg); }
+    .candidatos .candidato__chente-img {
+      background-image: url(assets/alejandro.jpg); }
+    .candidatos .candidato__gato-img {
+      background-image: url(assets/gato.jpg); }
+    .candidatos .candidato__david-img {
+      background-image: url(assets/david.jpg); }
+    .candidatos .candidato__santos-img {
+      background-image: url(assets/santos.jpg); }
+    .candidatos .candidato__leo-img {
+      background-image: url(assets/leorubio.jpg); }
+    .candidatos .candidato__gus-img {
+      background-image: url(assets/gus.jpg); }
+    .candidatos .candidato__carlitos-img {
+      background-image: url(assets/carlos.jpg); }
+
+.link {
+  background: gold;
+  border-radius: 50px;
+  -webkit-box-shadow: 5px 5px 5px #444444;
+  box-shadow: 5px 5px 5px #444444;
+  cursor: pointer;
+  font-size: 24px;
+  margin-top: 30px;
+  padding: 20px;
+  text-align: center;
+  -webkit-transition: ease-in-out .5s all;
+  -o-transition: ease-in-out .5s all;
+  transition: ease-in-out .5s all;
+  width: 300px; }
+  .link:hover, .link:focus {
+    background: orange; }
+  @media screen and (max-width: 768px) {
+    .link {
+      width: 80%; } }
