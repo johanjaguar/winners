@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const quienvota = document.querySelector('.quienvota');
     quienvota.addEventListener('input', function (evt) {
         let quienvotaprocesado = this.value;
+        const boton1 = document.querySelector('.toPantalla1');
         quienvotaprocesado = quienvotaprocesado.trim();
         quienvotaprocesado = quienvotaprocesado.toLowerCase();
         quienvotaprocesado = quienvotaprocesado.replace(/ /g,'');
@@ -11,11 +12,18 @@ document.addEventListener("DOMContentLoaded", function(){
             
             for(let i=0; i<=100; i++) {
                 alert('Parcero chupelo y pongase serio');
+                quienvota.value = "";
             }
         }
-    }); 
-});
 
+        if( this.value.length > 1 ) {
+            boton1.classList.add('visible');
+        } else {
+            boton1.classList.remove('visible');
+        }
+    });
+
+});
 
 
 document.addEventListener('click', function (event) {
