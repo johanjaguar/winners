@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Tomorrow&display=swap');
 body {
-    background: url(assets/webellis.jpg);
+    background-color: #000000;
+    background-image: url(assets/webellis.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
     font-family: 'Tomorrow', sans-serif;
 
-    @media screen and (max-width: 768px) {
-        background-size: cover;
-        background-position-x: -14em;
+    @media screen and (max-width: 768px) { 
+        background-attachment: fixed;
+        background-position: 14% top;
+        background-repeat: no-repeat;
+        background-size: 300%;
     }
 }
 
