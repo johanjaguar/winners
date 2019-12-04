@@ -1,8 +1,19 @@
 document.addEventListener("DOMContentLoaded", function(){
     // Handler when the DOM is fully loaded
-
-
-    
+    const quienvota = document.querySelector('.quienvota');
+    quienvota.addEventListener('input', function (evt) {
+        let quienvotaprocesado = this.value;
+        quienvotaprocesado = quienvotaprocesado.trim();
+        quienvotaprocesado = quienvotaprocesado.toLowerCase();
+        quienvotaprocesado = quienvotaprocesado.replace(/ /g,'');
+        console.log(quienvotaprocesado);
+        if( checkMalasPalabras(quienvotaprocesado) ) {
+            
+            for(let i=0; i<=100; i++) {
+                alert('Parcero chupelo y pongase serio');
+            }
+        }
+    }); 
 });
 
 
@@ -29,3 +40,25 @@ document.addEventListener('click', function (event) {
     scroll(0,0);
 
 }, false);
+
+const checkMalasPalabras = (palabra) => {
+    const malasPalabras = [
+        'nalgas', 
+        'basura', 
+        'trasero',
+        'chupelo',
+        'madre',
+        'sgpm',
+        'mama',
+        'mamelo',
+        'gordo',
+        'gonorrea',
+        'hijoeputa',
+        'perra',
+        'culo',
+        'verga'
+    ];
+    var rgx = new RegExp(malasPalabras.join("|")+"|" + "/gi");
+  return (rgx.test(palabra));
+}
+
