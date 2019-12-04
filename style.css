@@ -120,7 +120,7 @@ p {
       background-size: cover;
       border: 10px white solid;
       border-radius: 50%;
-      cursor: crosshair;
+      cursor: pointer;
       height: 150px;
       width: 150px; }
       @media screen and (max-width: 768px) {
@@ -134,15 +134,35 @@ p {
       -webkit-transition: ease-in-out .5s all;
       -o-transition: ease-in-out .5s all;
       transition: ease-in-out .5s all; }
-    .candidatos .candidato:hover, .candidatos .candidato:focus {
-      opacity: 0.8;
-      -webkit-transform: rotate(2deg) scale(1.2);
-      -ms-transform: rotate(2deg) scale(1.2);
-      transform: rotate(2deg) scale(1.2); }
-      .candidatos .candidato:hover .candidato__img, .candidatos .candidato:focus .candidato__img {
-        border: 10px gold solid; }
-      .candidatos .candidato:hover h4, .candidatos .candidato:focus h4 {
-        color: gold; }
+    .candidatos .candidato:hover .candidato__img, .candidatos .candidato:focus .candidato__img {
+      border: 10px gold solid; }
+    .candidatos .candidato:hover h4, .candidatos .candidato:focus h4 {
+      color: gold; }
+    .candidatos .candidato.seleccionado h4 {
+      color: gold; }
+    .candidatos .candidato.seleccionado .candidato__img {
+      position: relative;
+      border: 10px black solid; }
+      .candidatos .candidato.seleccionado .candidato__img:after, .candidatos .candidato.seleccionado .candidato__img:before {
+        content: '';
+        border-radius: 50%;
+        display: block;
+        cursor: pointer;
+        height: 150px;
+        position: absolute;
+        width: 150px;
+        top: 0;
+        left: 0; }
+      .candidatos .candidato.seleccionado .candidato__img:after {
+        border: 10px red solid;
+        -webkit-transform: translate(-20px, -10px);
+        -ms-transform: translate(-20px, -10px);
+        transform: translate(-20px, -10px); }
+      .candidatos .candidato.seleccionado .candidato__img:before {
+        border: 10px gold solid;
+        -webkit-transform: translate(-1px, -10px);
+        -ms-transform: translate(-1px, -10px);
+        transform: translate(-1px, -10px); }
     .candidatos .candidato__pancracia-img {
       background-image: url(assets/pancracia.jpg); }
     .candidatos .candidato__camila-img {

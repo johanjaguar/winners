@@ -4,10 +4,12 @@ document.addEventListener("DOMContentLoaded", function(){
     quienvota.addEventListener('input', function (evt) {
         let quienvotaprocesado = this.value;
         const boton1 = document.querySelector('.toPantalla1');
+        
+
         quienvotaprocesado = quienvotaprocesado.trim();
         quienvotaprocesado = quienvotaprocesado.toLowerCase();
         quienvotaprocesado = quienvotaprocesado.replace(/ /g,'');
-        console.log(quienvotaprocesado);
+
         if( checkMalasPalabras(quienvotaprocesado) ) {
             
             for(let i=0; i<=100; i++) {
@@ -23,6 +25,24 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
 
+    checkCandidato('1');
+    checkCandidato('2');
+    checkCandidato('3');
+    checkCandidato('4');
+
+    const boton5 = document.querySelector('.toPantalla5');
+    boton5.addEventListener('click', ()=>{
+        const elegidos = document.querySelectorAll('.seleccionado');
+
+        const elegidosArray = [];
+        elegidosArray["Quien Voto"] = quienvota.value;
+        elegidosArray["Mejor Nueva Jugadora"] = elegidos[0].classList[1];
+        elegidosArray["Mejor Jugadora"] = elegidos[1].classList[1];
+        elegidosArray["Mejor Nuevo Jugador"] = elegidos[2].classList[1];
+        elegidosArray["Mejor Jugador"] = elegidos[3].classList[1];
+
+        console.log(elegidosArray);
+    });
 });
 
 
@@ -35,7 +55,6 @@ document.addEventListener('click', function (event) {
 	event.preventDefault();
 
 	// Log the clicked element in the console
-    console.log(event.target);
     const destino = event.target.getAttribute('data-destino');
     const pantallas = document.querySelectorAll('.pantalla');
     pantallas.forEach( ( pantalla )=>{
@@ -64,9 +83,26 @@ const checkMalasPalabras = (palabra) => {
         'hijoeputa',
         'perra',
         'culo',
-        'verga'
+        'verga',
     ];
     var rgx = new RegExp(malasPalabras.join("|")+"|" + "/gi");
   return (rgx.test(palabra));
 }
 
+
+const checkCandidato = function(padre) {
+    candidatos = document.querySelectorAll('.pantalla__' + padre + ' .candidato');
+    candidatos.forEach((candidato)=>{
+        clicCandidato(candidato, candidatos);
+    });
+}
+
+const clicCandidato = function(candidato, candidatos){
+
+    candidato.addEventListener('click', (e)=>{
+        candidatos.forEach((c)=>{
+            c.classList.remove('seleccionado');
+        });
+        candidato.classList.add('seleccionado');
+    });
+}
